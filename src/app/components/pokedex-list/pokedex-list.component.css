@@ -1,0 +1,15 @@
+.range {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cards {
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 3rem;
+  width: 300px;
+}
+
+img {
+  width : 200px ;
+}

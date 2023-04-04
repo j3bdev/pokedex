@@ -1,0 +1,19 @@
+<p>Créer un nouveau Pokemon</p>
+<form #myForm="ngForm" (ngSubmit)="myForm.valid && addPokemon(pokemon)">
+  <label for="name">Son Nom :</label>
+  <input type="text" name="name" [(ngModel)]="pokemon.name" #name="ngModel" required><br />
+  <div *ngIf="myForm.submitted && name.errors">
+    <span *ngIf="name.errors?.['required']">Le nom du pokemon est requis</span>
+  </div><br />
+
+  <label for="image">Son image :</label>
+  <input type="text" name="image" [(ngModel)]="pokemon.image" #image="ngModel" required><br />
+  <div *ngIf="myForm.submitted && image.errors">
+    <span *ngIf="image.errors?.['required']">Le lien vers l'image du pokemon est requis</span>
+  </div><br />
+
+  <label for="description">Sa Description</label>
+  <input type="text" name="description" [(ngModel)]="pokemon.description" #description="ngModel"><br />
+  <button type="submit">Ajouter</button>
+</form>
+<button [routerLink]="['/']">Revenir sur la page d'acceuil</button>

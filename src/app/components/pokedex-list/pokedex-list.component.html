@@ -1,0 +1,8 @@
+<div class="range">
+  <ng-container *ngFor="let pokemon of pokemons">
+    <div class="cards" (click)="sendDataToParent(pokemon)">
+      <p>{{pokemon.name}}</p>
+      <img [src]="pokemon.image">
+    </div>
+  </ng-container>
+</div>
